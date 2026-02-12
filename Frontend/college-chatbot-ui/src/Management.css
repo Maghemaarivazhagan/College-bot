@@ -1,0 +1,141 @@
+.management {
+  padding: 80px 10%;
+  background: #0a0f2b; /* slightly deeper navy blue for elegance */
+  color: #f0f0f5; /* soft off-white for contrast */
+  font-family: 'Poppins', sans-serif;
+}
+
+.management h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+  color: #1e3a8a; /* rich royal blue for headings */
+}
+
+.management-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.management-member {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 28px;
+  border-radius: 14px;
+  background: rgba(20, 40, 90, 0.15); /* soft blue glass effect */
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* subtle shadow */
+
+  opacity: 0;
+  transform: translateY(-90px);
+  transition: all 0.9s ease;
+}
+
+.management-member.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.management-member img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+
+  transform: translateY(-40px);
+  opacity: 0;
+  transition: all 0.9s ease 0.25s;
+}
+
+.management-member.show img {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.member-text {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: all 0.9s ease 0.45s;
+}
+
+.management-member.show .member-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.member-text h3 {
+  font-size: 22px;
+  color: #1e40af; /* deep blue for member names */
+  margin-bottom: 6px;
+}
+
+.member-text h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #3b82f6; /* lighter sky-blue for titles */
+  margin-bottom: 12px;
+}
+
+.member-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #d0d0d8; /* soft gray-white for readability */
+}
+
+.border-box {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  pointer-events: none;
+}
+
+.management-member.show .border-box {
+  animation: drawBorder 1.2s ease forwards;
+}
+
+@keyframes drawBorder {
+  0% {
+    border-color: transparent;
+    clip-path: inset(0 100% 100% 0);
+  }
+  25% {
+    clip-path: inset(0 0 100% 0);
+    border-color: #1e40af; /* blue border animation */
+  }
+  50% {
+    clip-path: inset(0 0 0 100%);
+  }
+  75% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.management-member:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px rgba(30, 64, 175, 0.25); /* subtle blue glow */
+}
+
+@media (max-width: 768px) {
+  .management {
+    padding: 60px 6%;
+  }
+
+  .management-member {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .management-member img {
+    width: 160px;
+    height: 200px;
+  }
+}

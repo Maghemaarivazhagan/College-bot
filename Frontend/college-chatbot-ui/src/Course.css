@@ -1,0 +1,156 @@
+.courses-section {
+  padding: 60px 20px;
+  background: #0a0f2b; /* deep navy blue background for consistency */
+  font-family: "Poppins", sans-serif;
+  color: #f0f0f5; /* soft off-white text */
+}
+
+.courses-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #1e3a8a; /* royal blue heading */
+  letter-spacing: 1px;
+}
+
+.courses-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+}
+
+/* Each category as a glass-card */
+.course-category {
+  background: rgba(20, 40, 90, 0.15); /* blue glass effect */
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(30, 64, 175, 0.25);
+}
+
+/* Category buttons */
+.category-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* deep-to-light blue */
+  color: white;
+  border: none;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+.category-btn:hover {
+  background: linear-gradient(135deg, #1a3080, #3390ff);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, #14306b, #2673e6);
+}
+
+/* Subcategory list */
+.subcategory-list {
+  padding: 10px 15px 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+.subcategory {
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  background: rgba(255, 255, 255, 0.05); /* slight glass effect */
+}
+
+.subcategory-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.subcategory-btn:hover {
+  background: rgba(59, 130, 246, 0.15); /* light blue highlight */
+}
+
+.subcategory-btn.active {
+  background: rgba(59, 130, 246, 0.25);
+  color: #ffffff;
+}
+
+/* Courses list */
+.courses-list {
+  list-style: none;
+  margin: 0;
+  padding: 12px 20px;
+  background: rgba(20, 40, 90, 0.1); /* subtle glass effect */
+  border-radius: 10px;
+  animation: slideDown 0.3s ease;
+}
+
+.courses-list li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: #d0d0d8;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.courses-list li:last-child {
+  border-bottom: none;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .courses-section h2 {
+    font-size: 28px;
+  }
+
+  .category-btn {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .subcategory-btn {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,104 @@
+/* Trust.css */
+
+.trust-section {
+  padding: 80px 10%;
+  background: #0a0f2b; /* deep navy background */
+  color: #f0f0f5; /* soft off-white text */
+  font-family: 'Poppins', sans-serif;
+  border-radius: 14px;
+  backdrop-filter: blur(14px);
+}
+
+.trust-section h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #1e3a8a; /* royal blue heading */
+  letter-spacing: 1px;
+}
+
+.trust-section .tagline {
+  text-align: center;
+  font-size: 18px;
+  color: #3b82f6; /* lighter sky-blue for tagline */
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.trust-section h3,
+.trust-section h4 {
+  color: #1e40af; /* deep blue for subheadings */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.trust-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #d0d0d8; /* soft gray-white for readability */
+  margin-bottom: 20px;
+}
+
+.trust-section ul {
+  list-style: disc inside;
+  padding-left: 0;
+}
+
+.trust-section li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #d0d0d8;
+}
+
+.trust-section strong {
+  color: #3b82f6; /* subtle accent blue for strong text */
+}
+
+/* Optional: glass card effect on hover */
+.trust-section:hover {
+  box-shadow: 0 20px 50px rgba(30, 64, 175, 0.25);
+  transform: scale(1.01);
+  transition: all 0.4s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trust-section {
+    padding: 60px 6%;
+  }
+
+  .trust-section h2 {
+    font-size: 36px;
+  }
+
+  .trust-section p,
+  .trust-section li {
+    font-size: 14px;
+  }
+}
+
+/* Trust.css (bullet point improvements) */
+
+.trust-section ul {
+  list-style: none; /* remove default bullets */
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.trust-section li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  font-size: 15px;
+  color: #d0d0d8;
+}
+
+.trust-section li::before {
+  content: "•"; /* custom bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3b82f6; /* sky blue accent */
+  font-size: 20px; /* bigger and modern bullet */
+  line-height: 1;
+}
